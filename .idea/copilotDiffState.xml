@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/main.py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/main.py" />
+              <option name="originalContent" value="import matplotlib.pyplot as plt&#10;import os&#10;import re&#10;import shutil&#10;import string&#10;import tensorflow as tf&#10;&#10;from tensorflow.keras import layers&#10;from tensorflow.keras import losses&#10;&#10;url = &quot;https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz&quot;&#10;dataset = tf.keras.utils.get_file(&quot;aclImdb_v1&quot;, url,&#10;                                    untar=True, cache_dir='.',&#10;                                    cache_subdir='')&#10;&#10;dataset_dir = os.path.join(os.path.dirname(dataset), 'aclImdb')&#10;os.listdir(dataset_dir)&#10;train_dir = os.path.join(dataset_dir, 'train')&#10;os.listdir(train_dir)&#10;sample_file = os.path.join(train_dir, 'pos/1181_9.txt')&#10;with open(sample_file) as f:&#10;  print(f.read())&#10;  batch_size = 32&#10;  seed = 42&#10;&#10;raw_train_ds = tf.keras.utils.text_dataset_from_directory(&#10;      'aclImdb/train',&#10;      batch_size=batch_size,&#10;      validation_split=0.2,&#10;      subset='training',&#10;      seed=seed)&#10;&#10;for text_batch, label_batch in raw_train_ds.take(1):&#10;      for i in range(3):&#10;          print(&quot;Review&quot;, text_batch.numpy()[i])&#10;          print(&quot;Label&quot;, label_batch.numpy()[i])" />
+              <option name="updatedContent" value="import matplotlib.pyplot as plt&#10;import os&#10;import re&#10;import shutil&#10;import string&#10;import tensorflow as tf&#10;&#10;from tensorflow.keras import layers&#10;from tensorflow.keras import losses&#10;&#10;url = &quot;https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz&quot;&#10;dataset = tf.keras.utils.get_file(&quot;aclImdb_v1&quot;, url,&#10;                                    untar=True, cache_dir='.',&#10;                                    cache_subdir='')&#10;&#10;dataset_dir = os.path.join(os.path.dirname(dataset), 'aclImdb')&#10;os.listdir(dataset_dir)&#10;train_dir = os.path.join(dataset_dir, 'train')&#10;os.listdir(train_dir)&#10;sample_file = os.path.join(train_dir, 'pos/1181_9.txt')&#10;with open(sample_file) as f:&#10;    print(f.read())&#10;&#10;batch_size = 32&#10;seed = 42&#10;&#10;raw_train_ds = tf.keras.utils.text_dataset_from_directory(&#10;    train_dir,&#10;    batch_size=batch_size,&#10;    validation_split=0.2,&#10;    subset='training',&#10;    seed=seed)&#10;&#10;for text_batch, label_batch in raw_train_ds.take(1):&#10;    for i in range(3):&#10;        print(&quot;Review&quot;, text_batch.numpy()[i])&#10;        print(&quot;Label&quot;, label_batch.numpy()[i])" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
